@@ -43,9 +43,9 @@ passport.use(new FacebookStrategy({
 
 
 var allClosedAt = {
-  '5': { closedAt: new Date('2014','10','18','17','00','00').getTime() },
-  '6': { closedAt: new Date('2014','10','29','23','59','59').getTime() },
-  '7': { closedAt: new Date('2014','10','29','23','59','59').getTime() }
+  '1': { closedAt: new Date('2015','10','18','17','00','00').getTime() },
+  '2': { closedAt: new Date('2015','10','29','23','59','59').getTime() },
+  '3': { closedAt: new Date('2015','10','29','23','59','59').getTime() }
 };
 
 function filterSignatures(questions) {
@@ -301,7 +301,8 @@ api
 
     var result = Object.keys(allClosedAt).map(function (key) {
       var  candidate = allClosedAt[key];
-      return (new Date().getTime() > candidate.closedAt)? false: true;
+      return true;
+      // return (new Date().getTime() > candidate.closedAt)? false: true;
     });
     return res.json({
       status: "success",
@@ -312,11 +313,16 @@ api
 api
   .get('/policies', function (req, res) {
     var cid = req.query.cid;
+    // var policies = {
+    //   '5': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27],
+    //   '6': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34],
+    //   '7': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+    // }
     var policies = {
-      '5': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27],
-      '6': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34],
-      '7': [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
-    }
+      '1': [1,2,3,4],
+      '2': [1,2,3,4],
+      '3': [1,2,3,4]
+    };
     if(!cid) {
       return res.json({
         status: "success",

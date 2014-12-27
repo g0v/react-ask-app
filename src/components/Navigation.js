@@ -71,13 +71,12 @@ module.exports = React.createClass({
     var candidateMenu = (state.hideCandidate)? '': candidates.map((c) => {
       return <Link to="policies" params={{ candidateId: c.id }} key={c.id} onClick={this._handleCandidate}>
         <div className={'nav_list_function_item_inner md-whiteframe-z1 ' + toggleCandidateClass } >
-          <img src={c.avatar_square} />
           <div className="nav_list_function_item_text">{c.name}</div>
         </div>
       </Link>;
     });
 
-    var candidateName = '候選人';
+    var candidateName = '分類';
     var cid;
     if (this.getCurrentPath().match(/^\/candidates/)) {
       cid = this.getCurrentPath().match(/^\/candidates\/(\d+)/)[1];
@@ -100,7 +99,7 @@ module.exports = React.createClass({
       <div className='nav_list_toggle l_inline' onClick={props._toggleSiderBar}>
         <i className="fa fa-align-justify"></i>
       </div>
-      <Link to='/'><div className="nav_list_home">市長給問嗎！最後一役</div></Link>
+      <Link to='/'><div className="nav_list_home">憲餅廚房­：­憲­改­必­考­100題</div></Link>
       <div className="nav_list_function">
         <div className="nav_list_function_item l_inline" id="candidateTopMenu">
             <div className="nav_list_function_item_select" onClick={this._handleCandidate}><i className="fa fa-eye"></i> {candidateName}</div>

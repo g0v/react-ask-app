@@ -57,19 +57,20 @@ router.get('/candidates/:candidateId/policies/:policyId?', function (req, res) {
   }
   var policies = JSON.parse(fs.readFileSync(__dirname + '/policies.json', {encoding:'utf8'}));
   var policy = policies[candidateId][policyId];
-  if ('5' === candidateId && policyId >= 1 && policyId <= 27) {
+  if ('1' === candidateId && policyId >= 1 && policyId <= 4) {
+    console.log(policy);
     return _render(req, res, {
       title: policy.title,
       description: String(policy.content).replace(/<[^>]+>/gm, '').replace(/&nbsp;/gi,' ').substring(0,200)
     });
   }
-  if ('6' === candidateId && policyId >= 1 && policyId <= 34) {
+  if ('2' === candidateId && policyId >= 1 && policyId <= 4) {
     return _render(req, res, {
       title: policy.title,
       description: String(policy.content).replace(/<[^>]+>/gm, '').replace(/&nbsp;/gi,' ').substring(0,200)
     });
   }
-  if ('7' === candidateId && policyId >=1 && policyId <= 30) {
+  if ('3' === candidateId && policyId >=1 && policyId <= 4) {
     return _render(req, res, {
       title: policy.title,
       description: String(policy.content).replace(/<[^>]+>/gm, '').replace(/&nbsp;/gi,' ').substring(0,200)

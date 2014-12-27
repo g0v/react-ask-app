@@ -9,25 +9,60 @@ var {ActionTypes} = AppConstants;
 var CHANGE_EVENT = 'change';
 var _current = null;
 var _candidates = {
+  '1': {
+    id: 1,
+    name: '背景與原因',
+    avatar: '',
+    avatar_square: '',
+    status: false
+  },
+  '2': {
+    id: 2,
+    name: '憲法 ABC',
+    avatar: '',
+    avatar_square: '',
+    status: false
+  },
+  '3': {
+    id: 3,
+    name: '修憲程序',
+    avatar: '',
+    avatar_square: '',
+    status: false
+  },
+  '4': {
+    id: 4,
+    name: '人權保障',
+    avatar: '',
+    avatar_square: '',
+    status: false
+  },
   '5': {
     id: 5,
-    name: '馮光遠',
-    avatar: '/assets/images/candidates/5.jpg', //require("../../client/images/candidates/5.jpg")
-    avatar_square: '/assets/images/candidates_avatar/5.jpg',
+    name: '選舉制度',
+    avatar: '',
+    avatar_square: '',
     status: false
   },
   '6': {
     id: 6,
-    name: '連勝文',
-    avatar: '/assets/images/candidates/6.jpg', //require("../../client/images/candidates/6.jpg")
-    avatar_square: '/assets/images/candidates_avatar/6.jpg',
+    name: '中央政府體制',
+    avatar: '',
+    avatar_square: '',
     status: false
   },
   '7': {
     id: 7,
-    name: '柯文哲',
-    avatar: '/assets/images/candidates/7.jpg', //require("../../client/images/candidates/7.jpg")
-    avatar_square: '/assets/images/candidates_avatar/7.jpg',
+    name: '由五權改為三權',
+    avatar: '',
+    avatar_square: '',
+    status: false
+  },
+  '8': {
+    id: 8,
+    name: '主權者之界定',
+    avatar: '',
+    avatar_square: '',
     status: false
   }
 };
