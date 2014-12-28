@@ -14,9 +14,12 @@
     "React"
   ],
   "devDependencies": {
+    "LiveScript": "^1.3.1",
     "async": "^0.9.0",
+    "cheerio": "^0.18.0",
     "react-material": "0.0.2-alpha",
     "react-tools": "^0.12.0",
+    "request": "^2.51.0",
     "webpack-dev-server": "^1.6.5"
   },
   "dependencies": {
